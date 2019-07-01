@@ -1,39 +1,110 @@
 <html>
-	<head>
-		<title>
-			Hoan Tran's Portfolio Website
-		</title>
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<body>
-		<h1>Group Projects: </h1>
-			<h2>AI/Machine Learning: </h2>
-				<h3>Wumpus World AI in Minecraft: </h3>
-					<a href="https://0o0liver.github.io/XDLMAO/">Project Website</a>
-					<p>
-						Summary: <br>
-						Our group decided to try and create the Wumpus World AI within Minecraft using Microsoft's Project Malmo library. <br>
-						Using Malmo, we designed the Wumpus World game and its rules within Minecraft. <br>
-						We made it so that our agent would run on randomly generated worlds with different sizes as well as a varying number of pits. <br>
-						Each block of the map represents a different cell in the Wumpus World and type of block the agent stands on determines what it senses in the area. <br>
-						The agent will blindly traverse the map using a search algorithm so that it can backtrack once it finds an obstacle or a dead end. <br>
-						Towards the end of the project we started experimenting with different search algorithms starting with a DFS algorithm, <br>
-						then DFS with Djikstra's for the backtracking, A* without a heuristic, and A* with a heuristic.<br>
-						The heuristic used for A* was based on the number of nearby blocks that have been explored within a certain radius from a given block. <br>
-					</p>
-				<h3>NBA Game Predictions with Regression: </h3>
-					<a href="">Project Website</a>
-					<p>
-						Summary: <br>
+    <title>
+        Hoan Tran's Portfolio Website
+    </title>
 
-					</p>
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<hr>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-		<h1>Solo Projects: </h1>
-			<h2>Experimental Analysis Projects: </h2>
-				<h3>Analysis of Sorting Algorithms: </h3>
-				<h3>Analysis of bin Packing ALogrithms: </h3>
-				<h3>Analysis of Network Models and ALgorithms: </h3>
-	</body>
+    <!-- MathJax -->
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <nav id="NavBar">
+        <ul>
+            <li>
+                <a href="#Intro">Home</a>
+            </li>
+            <li>
+                <a href="#Group">Group Projects</a>
+                <ul>
+                    <li>
+                        <a href="#AI">AI/Machine Learning</a>
+                        <ul>
+                            <li><a href="#Wumpus">Wumpus World AI in Minecraft</a></li>
+                            <li><a href="#NBAPredictions">NBA Game Predictions Using Regression</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Solo">Solo Projects</a>
+                <ul>
+                    <li>
+                        <a href="#Analysis">Experimental Analysis Projects</a>
+                        <ul>
+                            <li><a href="#SortingAlgo">Analysis of Sorting Algorithms</a></li>
+                            <li><a href="#BinPackingAlgo">Analysis of Bin Packing Algorithms</a></li>
+                            <li><a href="#NetworkAlgo">Analysis of Network Models and Algorithms</a></li>
+                        </ul>
+                    
+                    </li>
+        
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <br>
+
+    <h1 id="Intro">Hoan Tran</h1>
+
+    <h1 id="Group">Group Projects: </h1>
+    <h2 id="AI">AI/Machine Learning: </h2>
+    <h3 id="Wumpus">Wumpus World AI in Minecraft: </h3>
+    <a href="https://0o0liver.github.io/XDLMAO/" target="_blank">Wumpus World in Minecraft Project Website</a>
+    <p class="writeup">
+        Summary: <br>
+        Our group decided to try and create the Wumpus World AI within Minecraft using Microsoft's Project Malmo library. Using Malmo, we designed the 
+        Wumpus World game and its rules within Minecraft. We made it so that our agent would run on randomly generated worlds with different sizes as 
+        well as a varying number of pits. Each block of the map represents a different cell in the Wumpus World and type of block the agent stands on 
+        determines what it senses in the area. The agent will blindly traverse the map using a search algorithm so that it can backtrack once it finds 
+        an obstacle or a dead end. Towards the end of the project we started experimenting with different search algorithms starting with a DFS algorithm,
+        then DFS with Djikstra's for the backtracking, A* without a heuristic, and A* with a heuristic. The heuristic used for A* was based on the number of 
+        nearby blocks that have been explored within a certain radius from a given block.
+    </p>
+    <!-- TODO: Maybe insert a gif of the AI running in the world -->
+
+    <h3 id="NBAPredictions">NBA Game Predictions with Regression: </h3>
+    <a href="">Project Website</a>
+    <p class="writeup">
+        Summary: <br>
+        Our group wanted to try and predict a given matchup between two NBA teams that have been playing in the season. To do this, our group first chose 
+        the features of the games that wil be used to predict who would win. We decided to use the "Four Factors" as described by Dean Oliver to be our 
+        data. For each game we compiled the data as the team's Effective Field Goal Percentage, Turnover Percentage, Offensive Rebound Percentage, and 
+        Free Throw Percentage. These four attributes would then be plotted as a function of their opponents Defensive Rating calculated by Basketball
+        Reference where we got our data from. We then split the data for each attribute into Testing and Training data to generate Polynomial Regression Lines
+        and chose the degree with the least error using the Regression function to predict their "next" game using that opponent's average Defensive Rating for 
+        the season up to that point. We then use Dean Oliver's percentage breakdown to calculate a weighted value to see who's weighted value is higher and by 
+        how much. We chose a concluded season from 2010 to make sure our approach to the problem was plausible as a predicter.
+    </p>
+    <hr>
+    <h1 id="Solo">Solo Projects: </h1>
+    <h2 id="Analysis">Experimental Analysis Projects: </h2>
+    <h3 id="SortingAlgo">Analysis of Sorting Algorithms: </h3>
+    <h3 id="BinPackingAlgo">Analysis of Bin Packing Alogrithms: </h3>
+    <h3 id="NetworkAlgo">Analysis of Network Models and Algorithms: </h3>
+
+
+
+</body>
 </html>
