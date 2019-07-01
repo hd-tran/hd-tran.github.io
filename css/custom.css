@@ -40,8 +40,21 @@ code {
 
 /*---------------------------------------------*/
 
-.writeup {
-	width: 900px;
+.firstTab {
+
+}
+
+.secondTab {
+	margin-left: 20px;
+}
+
+.thirdTab {
+	margin-left: 40px;	
+}
+
+.summary {
+	margin-left: 60px;
+	width: 800px;
 }
 
 #NavBar a {
