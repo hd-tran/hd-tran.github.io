@@ -41,20 +41,27 @@ code {
 /*---------------------------------------------*/
 
 .firstTab {
-
+  padding-left: 3vw;
+  padding-right: 7vw;
 }
 
 .secondTab {
-	margin-left: 20px;
+  padding-left: 3vw;
+  padding-right: 7vw;
+	margin-left: 1vw;
 }
 
 .thirdTab {
-	margin-left: 40px;	
+  padding-left: 3vw;
+  padding-right: 7vw;
+	margin-left: 2vw;
 }
 
 .summary {
-	margin-left: 60px;
-	width: 800px;
+  padding-left: 3vw;
+  padding-right: 7vw;
+	margin-left: 3vw;
+	width: 90vw;
 }
 
 #NavBar a {
@@ -64,21 +71,24 @@ code {
 #NavBar {
 	color: #4CAF50;
 }
-	
+
 #NavBar ul {
 	padding: 0;
 	margin: 0;
 	background: #004AC2;
 	float: left;
 }
-	
+
 #NavBar li {
 	float: left;
 	display: inline;
 	position: relative;
-	width: 300px;
+	width: 20vw;
 	list-style: none;
-	font-size: 18px;
+	font-size: 1.5em;
+  padding-left: .5vw;
+  padding-right: .5vw;
+  border: .1em solid #b4c6cf;
 }
 
 #NavBar ul ul {
@@ -88,19 +98,20 @@ code {
 	background: #4797ff;
 	display: none;
 }
-	
+
 #NavBar ul ul ul {
 	left: 100%;
 	top: 0;
 	background: #00B3AA;
 }
-	
+
 
 #NavBar li:hover > ul {
 	color: #00FA79;
 	display: block;
+  font-size: .6em;
 }
-	
+
 p {
 	clear: left;
 	padding-top: 1em;
