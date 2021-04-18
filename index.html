@@ -138,7 +138,18 @@
         Summary: <br>
         Our group decided to look into how machine learning and neural networks can help in the medical field. One of the most prominent use cases is image
         recognition and image processing for medical images. In this case we decided to use colonoscopy image and video data since we found a free data set to use
-        as well as a data set provided by a professor and graduate student.
+        as well as a data set provided by a professor and graduate student. We went through the process of annotating around 600 images total and combining it with
+        about 600 pre-annotated images from a public database. Since there were still a relatively small amount for training a neural network, we also performed some
+        image pre-processing such as some image rotations, flips, and zooming in or out to generate some more varied image data. We then implemented the U-Net
+        architecture because there has already been good studies into its effectiveness, especially for doing image segmentation on medical imaging data. To speed up
+        training, we also modified parts of it to hold the VGG16 weights from ImageNet which trains on thousands of images so that similar object detection layers
+        at the beginning of the network do not need to be retrained that much. Our metrics for accuracy were the Dice Coefficient and Intersection over Union which
+        are two common ways for evaluating image simlilarity or in this case, similarities between the training data and the predicted image segmentation mask. The model
+        was then trained at around 50 epochs with early stopping and a batch size of 4 since our GPUs were not the best. Overall, we got a respectable .844 accuracy
+        using the Dice Coefficient on the test data, but there is still room for improvement such as having a bigger training dataset by having more images or better
+        image pre-processing as well as possibly better training parameters. Furthermore, if we were to use this as an application, it would also likely be used on a
+        video feed rather than separate still images so as to detect polyps in real time during a colonoscopy.
+        </section>
 
         <br>
         <br>
@@ -149,8 +160,19 @@
 
     <h3 class="thirdTab" id="SearchEngine">Webpage Indexing and Search Engine </h3>
     <a class="summary" href="https://github.com/hd-tran/webpage-searching" target="_blank"> Webpage Indexing and Searching Repo</a>
+
+    <img class="imgPreview" src="./images/cosine-similarity-1007790.png" style="width:974px;height:306px;">
+
     <p class="summary">
       Summary : <br>
+      This group project is focused on creating one of the early versions of a search engine using a collection of scraped webpages connected to the University of
+      California, Irvine website. We focus the scope to just UCI so that testing is still reasonable while still being decently large enough to get a feel for
+      how well it runs at scale. The project stakes an inverted index of webpages and performs a search on them. The inverted index maps tokens to a list of websites
+      with the TF-IDF values for each one. TF means term frequency and refers to how many times that token appears on the webpage and IDF refers to Inverted Document
+      Frequnecy which refers to how many unique webpages the token appears in and makes it inverted (1 / DF). TF-IDF then becomes TF * IDF to be stored for each
+      [word,webpage] pair. The search engine will then take this inverted index and with a search query calculate the cosine similarity between the query tokens
+      and which webpages from the inverted index have the smallest cosine similarity. Cosine similarity takes the TF-IDF values for the query and each webpage for each
+      matching token as a vector and calculates how close the angle between the vectors are.
 
     </p>
 
@@ -158,13 +180,36 @@
     <hr>
     <h1 class="firstTab" id="Solo">Solo Projects: </h1>
 
+    <h2 class="secondTab" id="FabFlix">Faux Web Service: Full Stack </h2>
+    <a class="summary" href="https://github.com/hd-tran/Faux_Webservice">Root Repo</a>
+    <p class="summary">
+      Summary : <br>
+      This project was about trying to do full stack development for a webservice that mimics what the old Netflix used to do. It is coded using Java and MySQL as the
+      backend with services that provide account management (register, log in, token authentications, etc.), browsing for movies to purchase (database lookup), and
+      implementing the PayPal API for billing (as if it was a real service for purchasing movies). The frontend was developed using React and JavaScript to design a
+      single-page application so that browsing for movies and the multiple database lookups that occur for account authentications can happen dynamically. Of course,
+      the actual design and format of the webpage also uses CSS and HTML in conjunction with the JavaScript. Unfortunately, there isn't really a way for me to host
+      the entire webservice so the raw files are just stored in a github repository for now.
+    </p>
+
+
     <h2 class="secondTab" id="Analysis">Experimental Analysis Projects: </h2>
     <a class="summary" href="https://github.com/hd-tran/Algorithm_Analysis_Projs" target="_blank">Root Repo</a>
+    <p class="summary">
+      Summary : <br>
+      This section is less of an actual project, and more of a showcase for understanding various algorithms and the concept of scalability and run-time analysis. I use
+      some small test scripts for each algorithm to record different aspects such as run time, memory, or correctness depending on which algorithm. Besides just analyzing
+      theoretical big-O estimations, the scripts run actual test cases of varying sizes to show how each algorithm performs.
+    </p>
 
     <h3 class="thirdTab" id="SortingAlgo">Analysis of Sorting Algorithms: </h3>
     <a class="summary" href="https://github.com/hd-tran/Algorithm_Analysis_Projs/tree/master/sort_analysis" target="_blank">Sorting Analysis Repo</a>
     <p class="summary">
       Summary : <br>
+      Here I tested various sorting algorithms and while many of them are already known for there big-O runtime approximations from study and analysis, testing and plotting
+      the effects of higher runtime degrees on these known algorithms can serve as a good reference for how it scales in practice. The sorting algorithms include bubble sort,
+      annealing sort, insertion sort, and shell sort. They were mostly chosen for their very different approaches to sorting rather than trying to see which one is the absolute
+      best since it is already pretty well-known how well these algorithms run.
 
     </p>
 
@@ -173,6 +218,12 @@
     <a class="summary" href="https://github.com/hd-tran/Algorithm_Analysis_Projs/tree/master/bin_pack_analysis">Bin Packing Analysis Repo</a>
     <p class="summary">
       Summary : <br>
+      This project test for how well bin packing algorithms run. For humans, it is really easy to determine how to organize bins such that there is no excess space. However, for
+      algorithms it is almost impossible to perfectly replicate that type of bin packing without some form of prior knowledge or info. The different algorithms are the Next Fit
+      algorithm, First Fit, Best Fit, First Fit Decreasing, and Best Fit Decreasing. The names refer to what bin items should be placed into bins such as the First Fit algorithm
+      picking the first bin that can fit the current item. It keeps track of how much is in each bin and chooses the first one it can find and allocates new bins when no current
+      bin can hold it. The "Decreasing" variants are the same except the items are sorted first in decreasing order. For the most part, there is not an overtly best algorithm,
+      but the Next Fit algorithm is clearly the worst since it does not really care which bin it chooses to place items as long as it fits.
 
     </p>
 
@@ -181,15 +232,11 @@
     <a class="summary" href="https://github.com/hd-tran/Algorithm_Analysis_Projs/tree/master/network_algo_analysis">Network Model and Algorithm Analysis Repo</a>
     <p class="summary">
       Summary : <br>
-
-    </p>
-
-
-    <h2 class="secondTab" id="Other">Other Projects: </h2>
-    <h3 class="thirdTab" id="FabFlix">Faux Web Service: Full Stack </h3>
-    <a class="summary" href="https://github.com/hd-tran/Faux_Webservice">Root Repo</a>
-    <p class="summary">
-      Summary : <br>
+      This project explores how to traverse networks or graphs and the properties of the Barabasi-Albert model of networks. The properties explored are the diameter of a graph,
+      the clustering coefficient, and the degree distribution of the graph. The Barabsi-Albert model generates connections according to how many connections a certain node already
+      has. In other words, nodes more connections are more likely to generate connections to other nodes which is also known as "Preferential Attachment." The diameter of a graph
+      is the longest, shortest-path between all node pairs. The cluster coefficient refers to how much nodes tend to form groups of connections and can be calculated with the number
+      of triangle connections and dividing by the number of 2-edge paths. The degree distribution is the distribution of the nodes' neighbor counts.
 
     </p>
 
