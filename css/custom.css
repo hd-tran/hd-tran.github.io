@@ -14,10 +14,15 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  background-color: rgb(50, 50, 50);
+  color: rgb(225, 225, 225);
 }
 
-
+.dark-mode {
+  background-color: rgb(50, 50, 50);
+  color: rgb(225, 225, 225);
+}
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
@@ -95,7 +100,7 @@ code {
 	float: left;
 	display: inline;
 	position: relative;
-	width: 20vw;
+	width: 10vw;
 	list-style: none;
 	font-size: 1.5em;
   padding-left: .5vw;

@@ -35,6 +35,23 @@
                 <a href="#Intro">Home</a>
             </li>
             <li>
+                <a href="#Unreal">Unreal Projects</a>
+                <ul>
+                    <li>
+                        <a href="#Plugins">Unreal Plugins</a>
+                        <ul>
+                            <li><a href="#HLSLEditor">Customm HLSL Editor Plugin</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#GameProjects">Game Prototypes</a>
+                        <ul>
+                            <li><a href="#Beholder">Project Beholder</a></li>
+                            <li><a href="#Fialjam">Failjam</a></li>
+
+                        </ul>
+                    </li>
+            <li>
                 <a href="#Group">Group Projects</a>
                 <ul>
                     <li>
@@ -82,9 +99,50 @@
         include AI/Machine Learning as well as Computer Vision
         <br>
         These are some of the projects I have done so far that I felt were worth sharing. Many revolve around AI/Machine Learning concepts, but I also have experience with
-        other types of projects such as some Full Stack Development and algorithm testing.
+        other types of projects such as some Full Stack Development and algorithm testing. 
     </p>
+    <h1 class="firstTab" id="Unreal">Unreal Projects: </h1>
+    <h2 class="secondTab" id="Plugins">Unreal Plugins: </h2>
+    <h3 class="thirdTab" id="HLSLEditor">Customm HLSL Editor Plugin: </h3>
+    <a class="summary" href="https://github.com/hd-tran/CustomHLSLNodeEditor" target="_blank">Wumpus World in Minecraft Project Website</a>
+    <p class="summary">
+        Summary: <br>
+        While trying to use Unreal Engine as a tool to learn more about games and graphics, I found trying to learn shader programming natively within Unreal was not very accessible.
+        There exists a node called “Custom” inside the UE5 shader graph that can allow the user to add HLSL code into the shader graph, but its usability and functionality is 
+        cumbersome. The node allows inputs and outputs that can then be wired into the rest of the shader graph so that the user can mix regular shader graph nodes and the 
+        HLSL code. For the most part, it is perfectly functional at allowing HLSL code to be added to the shader graph, but the main issues stem from its usability and UI implementation.
+        <br>
+        Currently, the code needs to be added to a text field off to the side of the screen and the inputs and outputs need to be manually added individually and must match the HLSL variable 
+        they feed into within the code. Most workflows and tutorials implementing the Custom node involve using a third party text editor / IDE to author the HLSL code and then copying and 
+        pasting the code text into the Code field of the Custom node.
+        <br>    
+        <img class="imgPreview" src="./images/UE_Shader_Custom_HLSL_plugin.png" style="width:360px;height:460px;">
+        <br>
+        This plugin will allow the user to open up a window  to edit that Custom Node's "Code" field from within the Unreal Editor without having to open up a separate IDE or try to squint at the 
+        small text field to the side of the screen. Multiple different Custom nodes can be opened together as different tabs within the window and the names of those tabs correspond to the "Description" 
+        field for the Custom node. Both the tabs and the window behave like other Unreal tabs in that they can be freely resized and moved as well as docked within the editor to allow flexibility in how 
+        the user wants to interface with it.
+        <br>    
+        <img class="imgPreview" src="./images/HLSLSPluginDemo.gif" style="width:960px;height:540px;">
+        <br>
+    </p>
+    <h2 class="secondTab" id="GameProjects">Game Prototypes: </h2>
+    <h3 class="thirdTab" id="Beholder">Beholder: </h3>
+    <!-- TODO: Currently no Github repo/link setup -->
 
+    <p class="summary">
+        Summary: <br>
+        One of my first group projects in Unreal which was a prototype for a Resident evil survival horror type game. Our group consisted mainly of different programmers and engineers so we each had our own 
+        share of programming and blueprint mechanics to implement on top of various other responsibilities such as sound and art. My other non-programming responsibilities were centered around creating or 
+        obtaining different art assets such as meshes, textures, and post process effects.Some of the main mechanics I implemented include the Interact button for the character, the different interaction 
+        states for various objects, the enemy's "attack" and character damage state, as well as a special vision state that lets the player see different things not typically visible.
+        <br>    
+        <img class="imgPreview" src="./images/UE5_Beholder_VeilsightInteractDemo_low_fps.gif" style="width:960px;height:540px;">
+        <br>
+        <br>
+        <img class="imgPreview" src="./images/UE5_Beholder_Watcher.png" style="width:846px;height:500px;">
+        <br>
+    </p>
     <h1 class="firstTab" id="Group">Group Projects: </h1>
     <h2 class="secondTab" id="AI">AI/Machine Learning: </h2>
     <h3 class="thirdTab" id="Wumpus">Wumpus World AI in Minecraft: </h3>
